@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Label</key>
+        <string>jetslammed</string>
+        <key>ProgramArguments</key>
+        <array>
+                <string>/usr/libexec/jetslammed_daemon</string>
+        </array>
+        <key>Sockets</key>
+        <dict>
+                <key>ListenerSocket</key>
+                <dict>
+                        <key>SockPathName</key>
+                        <string>/var/tmp/jetslammed.sock</string>
+                        <key>SockPathMode</key>
+                        <integer>511</integer>
+                </dict>
+        </dict>
+</dict>
+</plist>
+

@@ -1,0 +1,16 @@
+#!/bin/sh
+case "$1" in
+    remove|deconfigure)
+        launchctl unload /Library/LaunchDaemons/jetslammed.plist 2>/dev/null
+        ;;
+    upgrade)
+        launchctl unload /Library/LaunchDaemons/jetslammed.plist 2>/dev/null
+        launchctl load /Library/LaunchDaemons/jetslammed.plist 2>/dev/null
+        ;;
+    failed-upgrade)
+        ;;
+    *)
+        echo "prerm called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
